@@ -1,0 +1,10 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://tinyurl.com/GraphQL-SDL
+
+
+scalar Email
+scalar DateTime
+scalar Json

@@ -1,0 +1,79 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://tinyurl.com/GraphQL-SDL
+
+
+type Query {
+  findFirstUser (
+    where: UserWhereInput,
+    orderBy: [UserOrderByWithRelationInput],
+    cursor: UserWhereUniqueInput,
+    take: Int,
+    skip: Int,
+    distinct: [UserScalarFieldEnum],
+  ): User,
+
+  findManyUser (
+    where: UserWhereInput,
+    orderBy: [UserOrderByWithRelationInput],
+    cursor: UserWhereUniqueInput,
+    take: Int,
+    skip: Int,
+    distinct: [UserScalarFieldEnum],
+  ): [User]!,
+
+  aggregateUser (
+    where: UserWhereInput,
+    orderBy: [UserOrderByWithRelationInput],
+    cursor: UserWhereUniqueInput,
+    take: Int,
+    skip: Int,
+  ): AggregateUser!,
+
+  groupByUser (
+    where: UserWhereInput,
+    orderBy: [UserOrderByWithAggregationInput],
+    by: [UserScalarFieldEnum]!,
+    having: UserScalarWhereWithAggregatesInput,
+    take: Int,
+    skip: Int,
+  ): [UserGroupByOutputType]!,
+
+  findUniqueUser (
+    where: UserWhereUniqueInput!,
+  ): User,
+
+}
+
+type Mutation {
+  createOneUser (
+    data: UserCreateInput!,
+  ): User!,
+
+  upsertOneUser (
+    where: UserWhereUniqueInput!,
+    create: UserCreateInput!,
+    update: UserUpdateInput!,
+  ): User!,
+
+  deleteOneUser (
+    where: UserWhereUniqueInput!,
+  ): User,
+
+  updateOneUser (
+    data: UserUpdateInput!,
+    where: UserWhereUniqueInput!,
+  ): User,
+
+  updateManyUser (
+    data: UserUpdateManyMutationInput!,
+    where: UserWhereInput,
+  ): AffectedRowsOutput!,
+
+  deleteManyUser (
+    where: UserWhereInput,
+  ): AffectedRowsOutput!,
+
+}

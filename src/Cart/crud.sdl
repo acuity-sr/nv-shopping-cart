@@ -1,0 +1,79 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://tinyurl.com/GraphQL-SDL
+
+
+extend type Query {
+  findFirstCart (
+    where: CartWhereInput,
+    orderBy: [CartOrderByWithRelationInput],
+    cursor: CartWhereUniqueInput,
+    take: Int,
+    skip: Int,
+    distinct: [CartScalarFieldEnum],
+  ): Cart,
+
+  findManyCart (
+    where: CartWhereInput,
+    orderBy: [CartOrderByWithRelationInput],
+    cursor: CartWhereUniqueInput,
+    take: Int,
+    skip: Int,
+    distinct: [CartScalarFieldEnum],
+  ): [Cart]!,
+
+  aggregateCart (
+    where: CartWhereInput,
+    orderBy: [CartOrderByWithRelationInput],
+    cursor: CartWhereUniqueInput,
+    take: Int,
+    skip: Int,
+  ): AggregateCart!,
+
+  groupByCart (
+    where: CartWhereInput,
+    orderBy: [CartOrderByWithAggregationInput],
+    by: [CartScalarFieldEnum]!,
+    having: CartScalarWhereWithAggregatesInput,
+    take: Int,
+    skip: Int,
+  ): [CartGroupByOutputType]!,
+
+  findUniqueCart (
+    where: CartWhereUniqueInput!,
+  ): Cart,
+
+}
+
+extend type Mutation {
+  createOneCart (
+    data: CartCreateInput!,
+  ): Cart!,
+
+  upsertOneCart (
+    where: CartWhereUniqueInput!,
+    create: CartCreateInput!,
+    update: CartUpdateInput!,
+  ): Cart!,
+
+  deleteOneCart (
+    where: CartWhereUniqueInput!,
+  ): Cart,
+
+  updateOneCart (
+    data: CartUpdateInput!,
+    where: CartWhereUniqueInput!,
+  ): Cart,
+
+  updateManyCart (
+    data: CartUpdateManyMutationInput!,
+    where: CartWhereInput,
+  ): AffectedRowsOutput!,
+
+  deleteManyCart (
+    where: CartWhereInput,
+  ): AffectedRowsOutput!,
+
+}

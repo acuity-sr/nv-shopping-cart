@@ -1,0 +1,40 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://tinyurl.com/GraphQL-SDL
+
+
+enum UserScalarFieldEnum {
+  id
+  name
+  email
+  password
+  createdAt
+  updatedAt
+}
+
+
+enum CartScalarFieldEnum {
+  id
+  createdAt
+  updatedAt
+  userId
+  coupon
+}
+
+
+enum ProductScalarFieldEnum {
+  id
+  name
+  price
+  image
+  createdAt
+  updatedAt
+}
+
+
+enum SortOrder {
+  asc
+  desc
+}

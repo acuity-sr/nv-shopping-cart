@@ -1,0 +1,386 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://tinyurl.com/GraphQL-SDL
+
+
+input CartCreateInput {
+  user: UserCreateInput!,
+  userId: String!,
+  items: [ProductCreateInput]!,
+  coupon: String,
+}
+
+input CartUpdateInput {
+  user: UserUpdateInput!,
+  userId: String!,
+  items: [ProductUpdateInput]!,
+  coupon: String,
+}
+
+type Cart {
+  """
+    @readOnly
+  """
+  id: ID,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  user: User,
+  userId: String,
+  items: [Product],
+  coupon: String,
+}
+
+input CartWhereInput {
+  AND: [CartWhereInput],
+  OR: [CartWhereInput],
+  NOT: [CartWhereInput],
+  """
+    @readOnly
+  """
+  id: StringFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeFilter,
+  user: UserWhereInput,
+  userId: StringFilter,
+  items: ProductListRelationFilter,
+  coupon: StringNullableFilter,
+}
+
+input CartOrderByWithRelationInput {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  user: UserOrderByWithRelationInput,
+  userId: SortOrder,
+  items: ProductOrderByRelationAggregateInput,
+  coupon: SortOrder,
+}
+
+input CartWhereUniqueInput {
+  """
+    @readOnly
+  """
+  id: String,
+  userId: String,
+}
+
+input CartOrderByWithAggregationInput {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  userId: SortOrder,
+  coupon: SortOrder,
+  _count: CartCountOrderByAggregateInput,
+  _max: CartMaxOrderByAggregateInput,
+  _min: CartMinOrderByAggregateInput,
+}
+
+input CartScalarWhereWithAggregatesInput {
+  AND: [CartScalarWhereWithAggregatesInput],
+  OR: [CartScalarWhereWithAggregatesInput],
+  NOT: [CartScalarWhereWithAggregatesInput],
+  """
+    @readOnly
+  """
+  id: StringWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeWithAggregatesFilter,
+  userId: StringWithAggregatesFilter,
+  coupon: StringNullableWithAggregatesFilter,
+}
+
+input CartUpdateManyMutationInput {
+  coupon: NullableStringFieldUpdateOperationsInput,
+}
+
+input CartRelationFilter {
+  is: CartWhereInput,
+  isNot: CartWhereInput,
+}
+
+input CartCountOrderByAggregateInput {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  userId: SortOrder,
+  coupon: SortOrder,
+}
+
+input CartMaxOrderByAggregateInput {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  userId: SortOrder,
+  coupon: SortOrder,
+}
+
+input CartMinOrderByAggregateInput {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  userId: SortOrder,
+  coupon: SortOrder,
+}
+
+input CartListRelationFilter {
+  every: CartWhereInput,
+  some: CartWhereInput,
+  none: CartWhereInput,
+}
+
+input CartOrderByRelationAggregateInput {
+  _count: SortOrder,
+}
+
+input CartCreateNestedOneWithoutUserInput {
+  create: CartCreateWithoutUserInput,
+  connectOrCreate: CartCreateOrConnectWithoutUserInput,
+  connect: CartWhereUniqueInput,
+}
+
+input CartUpdateOneWithoutUserInput {
+  create: CartCreateWithoutUserInput,
+  connectOrCreate: CartCreateOrConnectWithoutUserInput,
+  upsert: CartUpsertWithoutUserInput,
+  disconnect: Boolean,
+  delete: Boolean,
+  connect: CartWhereUniqueInput,
+  update: CartUpdateWithoutUserInput,
+}
+
+input CartCreateNestedManyWithoutItemsInput {
+  create: [CartCreateWithoutItemsInput],
+  connectOrCreate: [CartCreateOrConnectWithoutItemsInput],
+  connect: [CartWhereUniqueInput],
+}
+
+input CartUpdateManyWithoutItemsInput {
+  create: [CartCreateWithoutItemsInput],
+  connectOrCreate: [CartCreateOrConnectWithoutItemsInput],
+  upsert: [CartUpsertWithWhereUniqueWithoutItemsInput],
+  set: [CartWhereUniqueInput],
+  disconnect: [CartWhereUniqueInput],
+  delete: [CartWhereUniqueInput],
+  connect: [CartWhereUniqueInput],
+  update: [CartUpdateWithWhereUniqueWithoutItemsInput],
+  updateMany: [CartUpdateManyWithWhereWithoutItemsInput],
+  deleteMany: [CartScalarWhereInput],
+}
+
+input CartCreateWithoutUserInput {
+  coupon: String,
+  items: ProductCreateNestedManyWithoutCartsInput,
+}
+
+input CartCreateOrConnectWithoutUserInput {
+  where: CartWhereUniqueInput!,
+  create: CartCreateWithoutUserInput!,
+}
+
+input CartUpsertWithoutUserInput {
+  update: CartUpdateWithoutUserInput!,
+  create: CartCreateWithoutUserInput!,
+}
+
+input CartUpdateWithoutUserInput {
+  coupon: NullableStringFieldUpdateOperationsInput,
+  items: ProductUpdateManyWithoutCartsInput,
+}
+
+input CartCreateWithoutItemsInput {
+  coupon: String,
+  user: UserCreateNestedOneWithoutCartInput!,
+}
+
+input CartCreateOrConnectWithoutItemsInput {
+  where: CartWhereUniqueInput!,
+  create: CartCreateWithoutItemsInput!,
+}
+
+input CartUpsertWithWhereUniqueWithoutItemsInput {
+  where: CartWhereUniqueInput!,
+  update: CartUpdateWithoutItemsInput!,
+  create: CartCreateWithoutItemsInput!,
+}
+
+input CartUpdateWithWhereUniqueWithoutItemsInput {
+  where: CartWhereUniqueInput!,
+  data: CartUpdateWithoutItemsInput!,
+}
+
+input CartUpdateManyWithWhereWithoutItemsInput {
+  where: CartScalarWhereInput!,
+  data: CartUpdateManyMutationInput!,
+}
+
+input CartScalarWhereInput {
+  AND: [CartScalarWhereInput],
+  OR: [CartScalarWhereInput],
+  NOT: [CartScalarWhereInput],
+  """
+    @readOnly
+  """
+  id: StringFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeFilter,
+  userId: StringFilter,
+  coupon: StringNullableFilter,
+}
+
+input CartUpdateWithoutItemsInput {
+  coupon: NullableStringFieldUpdateOperationsInput,
+  user: UserUpdateOneRequiredWithoutCartInput,
+}
+
+type AggregateCart {
+  _count: CartCountAggregateOutputType,
+  _min: CartMinAggregateOutputType,
+  _max: CartMaxAggregateOutputType,
+}
+
+type CartGroupByOutputType {
+  """
+    @readOnly
+  """
+  id: ID,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  userId: String,
+  coupon: String,
+  _count: CartCountAggregateOutputType,
+  _min: CartMinAggregateOutputType,
+  _max: CartMaxAggregateOutputType,
+}
+
+type CartCountOutputType {
+  items: Int!,
+}
+
+type CartCountAggregateOutputType {
+  """
+    @readOnly
+  """
+  id: ID,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  userId: String,
+  coupon: String,
+  _all: Int!,
+}
+
+type CartMinAggregateOutputType {
+  """
+    @readOnly
+  """
+  id: ID,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  userId: String,
+  coupon: String,
+}
+
+type CartMaxAggregateOutputType {
+  """
+    @readOnly
+  """
+  id: ID,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  userId: String,
+  coupon: String,
+}

@@ -1,0 +1,79 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://tinyurl.com/GraphQL-SDL
+
+
+extend type Query {
+  findFirstProduct (
+    where: ProductWhereInput,
+    orderBy: [ProductOrderByWithRelationInput],
+    cursor: ProductWhereUniqueInput,
+    take: Int,
+    skip: Int,
+    distinct: [ProductScalarFieldEnum],
+  ): Product,
+
+  findManyProduct (
+    where: ProductWhereInput,
+    orderBy: [ProductOrderByWithRelationInput],
+    cursor: ProductWhereUniqueInput,
+    take: Int,
+    skip: Int,
+    distinct: [ProductScalarFieldEnum],
+  ): [Product]!,
+
+  aggregateProduct (
+    where: ProductWhereInput,
+    orderBy: [ProductOrderByWithRelationInput],
+    cursor: ProductWhereUniqueInput,
+    take: Int,
+    skip: Int,
+  ): AggregateProduct!,
+
+  groupByProduct (
+    where: ProductWhereInput,
+    orderBy: [ProductOrderByWithAggregationInput],
+    by: [ProductScalarFieldEnum]!,
+    having: ProductScalarWhereWithAggregatesInput,
+    take: Int,
+    skip: Int,
+  ): [ProductGroupByOutputType]!,
+
+  findUniqueProduct (
+    where: ProductWhereUniqueInput!,
+  ): Product,
+
+}
+
+extend type Mutation {
+  createOneProduct (
+    data: ProductCreateInput!,
+  ): Product!,
+
+  upsertOneProduct (
+    where: ProductWhereUniqueInput!,
+    create: ProductCreateInput!,
+    update: ProductUpdateInput!,
+  ): Product!,
+
+  deleteOneProduct (
+    where: ProductWhereUniqueInput!,
+  ): Product,
+
+  updateOneProduct (
+    data: ProductUpdateInput!,
+    where: ProductWhereUniqueInput!,
+  ): Product,
+
+  updateManyProduct (
+    data: ProductUpdateManyMutationInput!,
+    where: ProductWhereInput,
+  ): AffectedRowsOutput!,
+
+  deleteManyProduct (
+    where: ProductWhereInput,
+  ): AffectedRowsOutput!,
+
+}

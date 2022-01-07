@@ -2,18 +2,53 @@
   "name": "nv-shoppong-cart",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "build": "tsc && cpy '**/*.sdl' ../dist --cwd src --parents",
+    "start": "micro -p 1234",
+    "dev": "npm run build && concurrently tsc --watch && micro-dev -p 1234",
+    "inspect": "npm run build && node --inspect node_modules/.bin/micro-dev -- -p 1234",
+    "seed": "ts-node src/__tests__/fixtures/seeder/index.ts",
+    "todo": "npx leasot --ignore '**/*.sdl,**/*.json' src",
+    "format": "prettier --write .",
+    "refresh": "rimraf src prisma/migrations prisma/dev.*",
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev --skip-generate",
+    "studio": "prisma studio",
+    "seed_test": "npm run refresh && npm run generate && npm run migrate && npm run seed"
   },
   "keywords": [],
   "author": "sramam",
   "license": "ISC",
   "devDependencies": {
     "noun_and_verb": "github:tufan-io/noun_and_verb",
-    "prisma": "^3.7.0"
+    "prisma": "^3.7.0",
+    "@types/faker": "^5.5.9",
+    "@types/validator": "^13.7.0",
+    "concurrently": "^6.4.0",
+    "cpy-cli": "^3.1.1",
+    "cross-fetch": "^3.1.4",
+    "faker": "^5.5.3",
+    "leasot": "^12.0.0",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.3",
+    "unsplash-js": "^7.0.15",
+    "@types/micro": "^7.3.6",
+    "@types/micro-cors": "^0.1.2",
+    "micro-dev": "^3.0.0"
   },
   "dependencies": {
-    "@prisma/client": "^3.7.0"
+    "@prisma/client": "^3.7.0",
+    "@graphql-tools/schema": "^8.3.1",
+    "@graphql-tools/utils": "^8.5.4",
+    "@paljs/plugins": "^4.0.13",
+    "graphql-middleware": "^6.1.13",
+    "graphql-parse-resolve-info": "^4.12.0",
+    "validator": "^13.7.0",
+    "apollo-server-micro": "^3.5.0",
+    "micro": "^9.3.4",
+    "micro-cors": "^0.1.1"
   }
 }

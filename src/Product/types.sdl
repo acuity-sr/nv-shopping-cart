@@ -1,0 +1,434 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://tinyurl.com/GraphQL-SDL
+
+
+input ProductCreateInput {
+  name: String!,
+  price: Int!,
+  """
+    @mock faker.unsplash lights
+  """
+  image: String!,
+  carts: [CartCreateInput]!,
+}
+
+input ProductUpdateInput {
+  name: String!,
+  price: Int!,
+  """
+    @mock faker.unsplash lights
+  """
+  image: String!,
+  carts: [CartUpdateInput]!,
+}
+
+type Product {
+  """
+    @readOnly
+  """
+  id: ID,
+  name: String,
+  price: Int,
+  """
+    @mock faker.unsplash lights
+  """
+  image: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  carts: [Cart],
+}
+
+input ProductWhereInput {
+  AND: [ProductWhereInput],
+  OR: [ProductWhereInput],
+  NOT: [ProductWhereInput],
+  """
+    @readOnly
+  """
+  id: StringFilter,
+  name: StringFilter,
+  price: IntFilter,
+  """
+    @mock faker.unsplash lights
+  """
+  image: StringFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeFilter,
+  carts: CartListRelationFilter,
+}
+
+input ProductOrderByWithRelationInput {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  name: SortOrder,
+  price: SortOrder,
+  """
+    @mock faker.unsplash lights
+  """
+  image: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  carts: CartOrderByRelationAggregateInput,
+}
+
+input ProductWhereUniqueInput {
+  """
+    @readOnly
+  """
+  id: String,
+}
+
+input ProductOrderByWithAggregationInput {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  name: SortOrder,
+  price: SortOrder,
+  """
+    @mock faker.unsplash lights
+  """
+  image: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  _count: ProductCountOrderByAggregateInput,
+  _avg: ProductAvgOrderByAggregateInput,
+  _max: ProductMaxOrderByAggregateInput,
+  _min: ProductMinOrderByAggregateInput,
+  _sum: ProductSumOrderByAggregateInput,
+}
+
+input ProductScalarWhereWithAggregatesInput {
+  AND: [ProductScalarWhereWithAggregatesInput],
+  OR: [ProductScalarWhereWithAggregatesInput],
+  NOT: [ProductScalarWhereWithAggregatesInput],
+  """
+    @readOnly
+  """
+  id: StringWithAggregatesFilter,
+  name: StringWithAggregatesFilter,
+  price: IntWithAggregatesFilter,
+  """
+    @mock faker.unsplash lights
+  """
+  image: StringWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeWithAggregatesFilter,
+}
+
+input ProductUpdateManyMutationInput {
+  name: StringFieldUpdateOperationsInput,
+  price: IntFieldUpdateOperationsInput,
+  """
+    @mock faker.unsplash lights
+  """
+  image: StringFieldUpdateOperationsInput,
+}
+
+input ProductListRelationFilter {
+  every: ProductWhereInput,
+  some: ProductWhereInput,
+  none: ProductWhereInput,
+}
+
+input ProductOrderByRelationAggregateInput {
+  _count: SortOrder,
+}
+
+input ProductCountOrderByAggregateInput {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  name: SortOrder,
+  price: SortOrder,
+  """
+    @mock faker.unsplash lights
+  """
+  image: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input ProductAvgOrderByAggregateInput {
+  price: SortOrder,
+}
+
+input ProductMaxOrderByAggregateInput {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  name: SortOrder,
+  price: SortOrder,
+  """
+    @mock faker.unsplash lights
+  """
+  image: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input ProductMinOrderByAggregateInput {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  name: SortOrder,
+  price: SortOrder,
+  """
+    @mock faker.unsplash lights
+  """
+  image: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input ProductSumOrderByAggregateInput {
+  price: SortOrder,
+}
+
+input ProductCreateNestedManyWithoutCartsInput {
+  create: [ProductCreateWithoutCartsInput],
+  connectOrCreate: [ProductCreateOrConnectWithoutCartsInput],
+  connect: [ProductWhereUniqueInput],
+}
+
+input ProductUpdateManyWithoutCartsInput {
+  create: [ProductCreateWithoutCartsInput],
+  connectOrCreate: [ProductCreateOrConnectWithoutCartsInput],
+  upsert: [ProductUpsertWithWhereUniqueWithoutCartsInput],
+  set: [ProductWhereUniqueInput],
+  disconnect: [ProductWhereUniqueInput],
+  delete: [ProductWhereUniqueInput],
+  connect: [ProductWhereUniqueInput],
+  update: [ProductUpdateWithWhereUniqueWithoutCartsInput],
+  updateMany: [ProductUpdateManyWithWhereWithoutCartsInput],
+  deleteMany: [ProductScalarWhereInput],
+}
+
+input ProductCreateWithoutCartsInput {
+  name: String!,
+  price: Int!,
+  """
+    @mock faker.unsplash lights
+  """
+  image: String!,
+}
+
+input ProductCreateOrConnectWithoutCartsInput {
+  where: ProductWhereUniqueInput!,
+  create: ProductCreateWithoutCartsInput!,
+}
+
+input ProductUpsertWithWhereUniqueWithoutCartsInput {
+  where: ProductWhereUniqueInput!,
+  update: ProductUpdateWithoutCartsInput!,
+  create: ProductCreateWithoutCartsInput!,
+}
+
+input ProductUpdateWithWhereUniqueWithoutCartsInput {
+  where: ProductWhereUniqueInput!,
+  data: ProductUpdateWithoutCartsInput!,
+}
+
+input ProductUpdateManyWithWhereWithoutCartsInput {
+  where: ProductScalarWhereInput!,
+  data: ProductUpdateManyMutationInput!,
+}
+
+input ProductScalarWhereInput {
+  AND: [ProductScalarWhereInput],
+  OR: [ProductScalarWhereInput],
+  NOT: [ProductScalarWhereInput],
+  """
+    @readOnly
+  """
+  id: StringFilter,
+  name: StringFilter,
+  price: IntFilter,
+  """
+    @mock faker.unsplash lights
+  """
+  image: StringFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeFilter,
+}
+
+input ProductUpdateWithoutCartsInput {
+  name: StringFieldUpdateOperationsInput,
+  price: IntFieldUpdateOperationsInput,
+  """
+    @mock faker.unsplash lights
+  """
+  image: StringFieldUpdateOperationsInput,
+}
+
+type AggregateProduct {
+  _count: ProductCountAggregateOutputType,
+  _avg: ProductAvgAggregateOutputType,
+  _sum: ProductSumAggregateOutputType,
+  _min: ProductMinAggregateOutputType,
+  _max: ProductMaxAggregateOutputType,
+}
+
+type ProductGroupByOutputType {
+  """
+    @readOnly
+  """
+  id: ID,
+  name: String,
+  price: Int,
+  """
+    @mock faker.unsplash lights
+  """
+  image: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  _count: ProductCountAggregateOutputType,
+  _avg: ProductAvgAggregateOutputType,
+  _sum: ProductSumAggregateOutputType,
+  _min: ProductMinAggregateOutputType,
+  _max: ProductMaxAggregateOutputType,
+}
+
+type ProductCountOutputType {
+  carts: Int!,
+}
+
+type ProductCountAggregateOutputType {
+  """
+    @readOnly
+  """
+  id: ID,
+  name: String,
+  price: Int,
+  """
+    @mock faker.unsplash lights
+  """
+  image: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  _all: Int!,
+}
+
+type ProductAvgAggregateOutputType {
+  price: Int,
+}
+
+type ProductSumAggregateOutputType {
+  price: Int,
+}
+
+type ProductMinAggregateOutputType {
+  """
+    @readOnly
+  """
+  id: ID,
+  name: String,
+  price: Int,
+  """
+    @mock faker.unsplash lights
+  """
+  image: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+}
+
+type ProductMaxAggregateOutputType {
+  """
+    @readOnly
+  """
+  id: ID,
+  name: String,
+  price: Int,
+  """
+    @mock faker.unsplash lights
+  """
+  image: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+}

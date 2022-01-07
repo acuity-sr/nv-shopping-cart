@@ -1,0 +1,19 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://tinyurl.com/GraphQL-SDL
+
+
+extend type Mutation {
+  executeRaw (
+    query: String!,
+    parameters: Json,
+  ): Json!,
+
+  queryRaw (
+    query: String!,
+    parameters: Json,
+  ): Json!,
+
+}

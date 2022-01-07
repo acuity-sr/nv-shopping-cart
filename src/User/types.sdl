@@ -1,0 +1,435 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://tinyurl.com/GraphQL-SDL
+
+
+input UserCreateInput {
+  """
+    @mock faker.name.firstName
+  """
+  name: String!,
+  """
+    @scalar Email
+  """
+  email: Email!,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String!,
+  cart: CartCreateInput,
+}
+
+input UserUpdateInput {
+  """
+    @mock faker.name.firstName
+  """
+  name: String!,
+  """
+    @scalar Email
+  """
+  email: Email!,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String!,
+  cart: CartUpdateInput,
+}
+
+type User {
+  """
+    @createOnly
+    @readOnly
+  """
+  id: ID,
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @scalar Email
+  """
+  email: Email,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  cart: Cart,
+}
+
+input UserWhereInput {
+  AND: [UserWhereInput],
+  OR: [UserWhereInput],
+  NOT: [UserWhereInput],
+  """
+    @createOnly
+    @readOnly
+  """
+  id: StringFilter,
+  """
+    @mock faker.name.firstName
+  """
+  name: StringFilter,
+  """
+    @scalar Email
+  """
+  email: StringFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeFilter,
+  cart: CartWhereInput,
+}
+
+input UserOrderByWithRelationInput {
+  """
+    @createOnly
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @mock faker.name.firstName
+  """
+  name: SortOrder,
+  """
+    @scalar Email
+  """
+  email: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  cart: CartOrderByWithRelationInput,
+}
+
+input UserWhereUniqueInput {
+  """
+    @createOnly
+    @readOnly
+  """
+  id: String,
+}
+
+input UserOrderByWithAggregationInput {
+  """
+    @createOnly
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @mock faker.name.firstName
+  """
+  name: SortOrder,
+  """
+    @scalar Email
+  """
+  email: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  _count: UserCountOrderByAggregateInput,
+  _max: UserMaxOrderByAggregateInput,
+  _min: UserMinOrderByAggregateInput,
+}
+
+input UserScalarWhereWithAggregatesInput {
+  AND: [UserScalarWhereWithAggregatesInput],
+  OR: [UserScalarWhereWithAggregatesInput],
+  NOT: [UserScalarWhereWithAggregatesInput],
+  """
+    @createOnly
+    @readOnly
+  """
+  id: StringWithAggregatesFilter,
+  """
+    @mock faker.name.firstName
+  """
+  name: StringWithAggregatesFilter,
+  """
+    @scalar Email
+  """
+  email: StringWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeWithAggregatesFilter,
+}
+
+input UserUpdateManyMutationInput {
+  """
+    @mock faker.name.firstName
+  """
+  name: StringFieldUpdateOperationsInput,
+  """
+    @scalar Email
+  """
+  email: StringFieldUpdateOperationsInput,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: StringFieldUpdateOperationsInput,
+}
+
+input UserCountOrderByAggregateInput {
+  """
+    @createOnly
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @mock faker.name.firstName
+  """
+  name: SortOrder,
+  """
+    @scalar Email
+  """
+  email: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input UserMaxOrderByAggregateInput {
+  """
+    @createOnly
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @mock faker.name.firstName
+  """
+  name: SortOrder,
+  """
+    @scalar Email
+  """
+  email: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input UserMinOrderByAggregateInput {
+  """
+    @createOnly
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @mock faker.name.firstName
+  """
+  name: SortOrder,
+  """
+    @scalar Email
+  """
+  email: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input UserRelationFilter {
+  is: UserWhereInput,
+  isNot: UserWhereInput,
+}
+
+input UserCreateNestedOneWithoutCartInput {
+  create: UserCreateWithoutCartInput,
+  connectOrCreate: UserCreateOrConnectWithoutCartInput,
+  connect: UserWhereUniqueInput,
+}
+
+input UserUpdateOneRequiredWithoutCartInput {
+  create: UserCreateWithoutCartInput,
+  connectOrCreate: UserCreateOrConnectWithoutCartInput,
+  upsert: UserUpsertWithoutCartInput,
+  connect: UserWhereUniqueInput,
+  update: UserUpdateWithoutCartInput,
+}
+
+input UserCreateWithoutCartInput {
+  """
+    @mock faker.name.firstName
+  """
+  name: String!,
+  """
+    @scalar Email
+  """
+  email: String!,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String!,
+}
+
+input UserCreateOrConnectWithoutCartInput {
+  where: UserWhereUniqueInput!,
+  create: UserCreateWithoutCartInput!,
+}
+
+input UserUpsertWithoutCartInput {
+  update: UserUpdateWithoutCartInput!,
+  create: UserCreateWithoutCartInput!,
+}
+
+input UserUpdateWithoutCartInput {
+  """
+    @mock faker.name.firstName
+  """
+  name: StringFieldUpdateOperationsInput,
+  """
+    @scalar Email
+  """
+  email: StringFieldUpdateOperationsInput,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: StringFieldUpdateOperationsInput,
+}
+
+type AggregateUser {
+  _count: UserCountAggregateOutputType,
+  _min: UserMinAggregateOutputType,
+  _max: UserMaxAggregateOutputType,
+}
+
+type UserGroupByOutputType {
+  """
+    @createOnly
+    @readOnly
+  """
+  id: ID,
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @scalar Email
+  """
+  email: Email,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  _count: UserCountAggregateOutputType,
+  _min: UserMinAggregateOutputType,
+  _max: UserMaxAggregateOutputType,
+}
+
+type UserCountAggregateOutputType {
+  """
+    @createOnly
+    @readOnly
+  """
+  id: ID,
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @scalar Email
+  """
+  email: Email,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  _all: Int!,
+}
+
+type UserMinAggregateOutputType {
+  """
+    @createOnly
+    @readOnly
+  """
+  id: ID,
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @scalar Email
+  """
+  email: Email,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+}
+
+type UserMaxAggregateOutputType {
+  """
+    @createOnly
+    @readOnly
+  """
+  id: ID,
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @scalar Email
+  """
+  email: Email,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+}
