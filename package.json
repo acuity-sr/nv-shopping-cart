@@ -10,6 +10,7 @@
   "author": "sramam",
   "license": "ISC",
   "devDependencies": {
+    "noun_and_verb": "github:tufan-io/noun_and_verb",
     "prisma": "^3.7.0"
   },
   "dependencies": {
