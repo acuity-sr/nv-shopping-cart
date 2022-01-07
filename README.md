@@ -22,9 +22,9 @@ git init
 npx prisma init
 
 ### off-script: add vanilla relational model to `prisma/schema.prisma`
-# [see this for an example](https://github.com/acuity-sr/nv-shopping-cart/commit/1380669545b97f47b2133a73c18a4097d4325ce2#diff-5b443964f4f3a611682db8f7e02177b0a8c632b2039e2bd5e4dd7347815c565c)
+# [see this for an example](https://github.com/acuity-sr/nv-shopping-cart/commit/b2041457edb24bab2cfe7cba273401234f12e781#diff-5b443964f4f3a611682db8f7e02177b0a8c632b2039e2bd5e4dd7347815c565c)
 
-curl -o prisma/schema.prisma https://raw.githubusercontent.com/acuity-sr/nv-shopping-cart/1380669545b97f47b2133a73c18a4097d4325ce2/prisma/schema.prisma
+curl -o prisma/schema.prisma https://raw.githubusercontent.com/acuity-sr/nv-shopping-cart/b2041457edb24bab2cfe7cba273401234f12e781/prisma/schema.prisma
 
 # stage these changes, so we can use git-diff to locate/inspect generated code 
 git add .
@@ -59,9 +59,9 @@ npm install tufan-io/noun_and_verb  --save-dev
 #     7. @directive
 #     8. @default
 #
-# [see example here](https://github.com/acuity-sr/nv-shopping-cart/commit/c76a75ad6c53484705bca5211493e0d4f46f4f38#diff-5b443964f4f3a611682db8f7e02177b0a8c632b2039e2bd5e4dd7347815c565c)
+# [see example here](https://github.com/acuity-sr/nv-shopping-cart/commit/71045f0a95b488c33c000efed75b85be9ac946d4#diff-5b443964f4f3a611682db8f7e02177b0a8c632b2039e2bd5e4dd7347815c565c)
 
-curl -o prisma/schema.prisma https://raw.githubusercontent.com/acuity-sr/nv-shopping-cart/c76a75ad6c53484705bca5211493e0d4f46f4f38/prisma/schema.prisma
+curl -o prisma/schema.prisma https://raw.githubusercontent.com/acuity-sr/nv-shopping-cart/71045f0a95b488c33c000efed75b85be9ac946d4/prisma/schema.prisma
 
 git add .
 
