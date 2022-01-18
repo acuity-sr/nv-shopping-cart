@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/server.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "test": "jest",
     "build": "tsc && cpy '**/*.sdl' ../dist --cwd src --parents",
