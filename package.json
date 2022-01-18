@@ -11,6 +11,7 @@
     "build": "tsc && cpy '**/*.sdl' ../dist --cwd src --parents",
     "start": "micro -p 1234",
     "dev": "npm run build && concurrently tsc --watch && micro-dev -p 1234",
+    "dokku": "micro-dev -p 1234",
     "inspect": "npm run build && node --inspect node_modules/.bin/micro-dev -- -p 1234",
     "seed": "ts-node src/__tests__/fixtures/seeder/index.ts",
     "todo": "npx leasot --ignore '**/*.sdl,**/*.json' src",
